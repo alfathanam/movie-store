@@ -44,6 +44,11 @@ module.exports = (sequelize, DataTypes) => {
       image: DataTypes.STRING,
     },
     {
+      hooks: {
+        beforeCreate: function (actors, option) {
+          actors.image = "https://via.placeholder.com/150";
+        },
+      },
       sequelize,
       modelName: "actors",
     }

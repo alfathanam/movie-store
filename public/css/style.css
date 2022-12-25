@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
+
+body {
+  /* background-color: #fcf9be; */
+  font-family: "Fira Code", monospace;
+}
+
+.form-main {
+  border: 1px solid black;
+  padding: 5px;
+}
+.actor {
+  font-size: 12px;
+}

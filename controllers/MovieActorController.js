@@ -5,7 +5,27 @@ class MovieActorController {
       const result = await movieActor.findAll({
         include: [movies, actors],
       });
-      res.json(result);
+      // res.json(result);
+      let resultActor = result.map((e) => {
+        // let dataMovie = e.movie.dataValues;
+        let dataActor = e.actor.dataValues;
+        // const {
+        //   name: actorName,
+        //   age,
+        //   address,
+        //   image: imageActor,
+        // } = e.actor.dataValues;
+        return dataActor;
+      });
+
+      let resultMovie = result.map((e) => {
+        let dataMovie = e.movie.dataValues;
+
+        return dataMovie;
+        // console.info(dataMovies);
+      });
+
+      res.render("showMovies.ejs", { resultActor, resultMovie });
     } catch (err) {
       res.json(err);
     }

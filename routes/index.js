@@ -7,7 +7,8 @@ route.use("/actors", routeActors);
 route.use("/movies", routeMovies);
 route.use("/moviesactor", routeMovieActor);
 route.get("/", (req, res) => {
-  res.send(`Hello world`);
+  // res.send(`Hello world`);
+  res.render("index.ejs");
 });
 
 module.exports = route;
